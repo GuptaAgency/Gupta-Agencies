@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gupta Agencies - Home Appliances Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="logo">Gupta Agencies</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="cart-btn" onclick="toggleCart()">🛒 Cart (<span id="cart-count">0</span>)</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1>Welcome to Gupta Agencies</h1>
+    <p>Your trusted store for electronics & home appliances</p>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="products">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+
+      <div class="product">
+        <h3>Refrigerator</h3>
+        <p>Price: ₹30000</p>
+        <button onclick="addToCart('Refrigerator', 30000)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <h3>LED TV</h3>
+        <p>Price: ₹40000</p>
+        <button onclick="addToCart('LED TV', 40000)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <h3>Washing Machine</h3>
+        <p>Price: ₹25000</p>
+        <button onclick="addToCart('Washing Machine', 25000)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <h3>Microwave Oven</h3>
+        <p>Price: ₹15000</p>
+        <button onclick="addToCart('Microwave Oven', 15000)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <h3>Air Conditioner</h3>
+        <p>Price: ₹35000</p>
+        <button onclick="addToCart('Air Conditioner', 35000)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <h3>Mobile Phone</h3>
+        <p>Price: ₹20000</p>
+        <button onclick="addToCart('Mobile Phone', 20000)">Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>Gupta Agencies is a leading electronics and home appliances store offering refrigerators, TVs, washing machines, ACs, mobiles, and more. We focus on quality, affordability, and customer satisfaction.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Address:</strong> 123 Market Road, City, India</p>
+    <p><strong>Phone:</strong> +91-9876543210</p>
+    <p><strong>Email:</strong> info@guptaagencies.com</p>
+  </section>
+
+  <!-- Floating Cart -->
+  <div id="cart-panel" class="cart-panel">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: ₹<span id="cart-total">0</span></p>
+    <button onclick="closeCart()">Close</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
